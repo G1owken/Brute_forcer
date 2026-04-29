@@ -1,0 +1,17 @@
+import secrets
+import string
+def generate_random_password(length=12):
+    if length < 10:
+        raise ValueError("Password length should be at least 10 characters.")
+    categories = [
+        string.ascii_uppercase,  # Uppercase letters
+        string.ascii_lowercase,  # Lowercase letters
+        string.digits,  # Digits
+        string.punctuation  # Special characters
+    ]
+    password = [secrets.choice(category) for category in categories]
+    all_characters = ''.join(categories)
+    password += [secrets.choice(all_characters) for _ in range(length - 4)]
+    secrets.SystemRandom().shuffle(password)
+    return ''.join(password)
+
