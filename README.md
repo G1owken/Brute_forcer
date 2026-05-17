@@ -38,7 +38,7 @@ The original folder is permanently deleted after encryption, not moved to trash.
 
 Key files store the archive name alongside the password. Don't edit them manually — the parser splits on ": " and will break if that line changes.
 
-archives/ and passwords/ are both listed in .gitignore. Keep it that way, especially if the repo is public.
+archives/ and passwords/ are both listed in .gitignore. Keep it that way.
 
 ## Requirements
 
